@@ -36,9 +36,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnTM"
@@ -46,9 +47,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnTR"
@@ -56,9 +58,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -73,9 +76,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnMM"
@@ -83,9 +87,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnMR"
@@ -93,9 +98,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -110,9 +116,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnBM"
@@ -120,9 +127,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <Button
                     android:id="@+id/btnBR"
@@ -130,9 +138,10 @@
                     android:layout_height="134dp"
                     android:backgroundTint="@color/background"
                     android:textAlignment="center"
-                    android:textColor="@color/O"
+                    android:textColor="@color/q"
                     android:textSize="92sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
             </LinearLayout>
         </LinearLayout>
@@ -202,5 +211,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/tvTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn: Player 1"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

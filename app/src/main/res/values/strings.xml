@@ -4,4 +4,6 @@
     <string name="o">O</string>
     <string name="tic_tac_toe">Tic Tac Toe</string>
     <string name="turn_player">Turn: Player</string>
+    <string name="TurnPlayer1">Turn: Player 1</string>
+    <string name="TurnPlayer2">Turn: Player 2</string>
 </resources>

@@ -11,4 +11,5 @@
     <color name = "background">#000000</color>
     <color name = "X">#FD7007</color>
     <color name = "O">#FFE500</color>
+    <color name = "q">#00FFFF</color>
 </resources>
