@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="402dp"
+        android:layout_height="402dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/background"
+        android:backgroundTint="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTL"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTM"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnTR"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnML"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnMM"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnMR"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBL"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBM"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBR"
+                    android:layout_width="134dp"
+                    android:layout_height="134dp"
+                    android:backgroundTint="@color/background"
+                    android:textAlignment="center"
+                    android:textColor="@color/O"
+                    android:textSize="92sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTicTacToe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tic_tac_toe"
+        android:textColor="@color/purple_500"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <Button
+        android:id="@+id/btnChooseX"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/background"
+        android:text="@string/o"
+        android:textColor="@color/O"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <Button
+        android:id="@+id/btnChooseO"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/background"
+        android:text="@string/x"
+        android:textColor="@color/X"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <TextView
+        android:id="@+id/tvChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1 Choose Mark"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
