@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View.INVISIBLE
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //Players
         //TODO("Change default symbols of players")
+        Player1 = "NA"
+        Player2 = "NA"
 
         //button declaration
         val ChooseX = findViewById<Button>(R.id.btnChooseX)
@@ -45,133 +48,152 @@ class MainActivity : AppCompatActivity() {
             setPlayerMarks(1)
             ChooseX.visibility = INVISIBLE
             ChooseO.visibility = INVISIBLE
-            textChoose.visibility = INVISIBLE
         }
 
         TL.setOnClickListener{
-            if (CurPlayer=="X") {
-                TL.setTextColor(ContextCompat.getColor(this,R.color.X))
-                TL.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    TL.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    TL.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    TL.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    TL.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                TL.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                TL.setTextColor(ContextCompat.getColor(this,R.color.O))
-                TL.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            TL.isClickable = false
         }
         TM.setOnClickListener{
-            if (CurPlayer=="X") {
-                TM.setTextColor(ContextCompat.getColor(this,R.color.X))
-                TM.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    TM.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    TM.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    TM.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    TM.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                TM.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                TM.setTextColor(ContextCompat.getColor(this,R.color.O))
-                TM.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            TM.isClickable = false
         }
         TR.setOnClickListener{
-            if (CurPlayer=="X") {
-                TR.setTextColor(ContextCompat.getColor(this,R.color.X))
-                TR.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    TR.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    TR.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    TR.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    TR.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                TR.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                TR.setTextColor(ContextCompat.getColor(this,R.color.O))
-                TR.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            TR.isClickable = false
         }
 
 
 
         // row 2
         ML.setOnClickListener{
-            if (CurPlayer=="X") {
-                ML.setTextColor(ContextCompat.getColor(this,R.color.X))
-                ML.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    ML.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    ML.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    ML.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    ML.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                ML.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                ML.setTextColor(ContextCompat.getColor(this,R.color.O))
-                ML.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            ML.isClickable = false
         }
         MM.setOnClickListener{
-            if (CurPlayer=="X") {
-                MM.setTextColor(ContextCompat.getColor(this,R.color.X))
-                MM.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    MM.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    MM.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    MM.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    MM.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                MM.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                MM.setTextColor(ContextCompat.getColor(this,R.color.O))
-                MM.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            MM.isClickable = false
         }
         MR.setOnClickListener{
-            if (CurPlayer=="X") {
-                MR.setTextColor(ContextCompat.getColor(this,R.color.X))
-                MR.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    MR.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    MR.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    MR.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    MR.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                MR.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                MR.setTextColor(ContextCompat.getColor(this,R.color.O))
-                MR.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            MR.isClickable = false
         }
 
 
 
         //row 3
         BL.setOnClickListener{
-            if (CurPlayer=="X") {
-                BL.setTextColor(ContextCompat.getColor(this,R.color.X))
-                BL.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    BL.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    BL.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    BL.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    BL.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                BL.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                BL.setTextColor(ContextCompat.getColor(this,R.color.O))
-                BL.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            BL.isClickable = false
         }
         BM.setOnClickListener{
-            if (CurPlayer=="X") {
-                BM.setTextColor(ContextCompat.getColor(this,R.color.X))
-                BM.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    BM.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    BM.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    BM.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    BM.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                BM.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                BM.setTextColor(ContextCompat.getColor(this,R.color.O))
-                BM.text = getString(R.string.o)
-                CurPlayer = "X"
-            }
-            BM.isClickable = false
         }
         BR.setOnClickListener{
-            if (CurPlayer=="X") {
-                BR.setTextColor(ContextCompat.getColor(this,R.color.X))
-                BR.text = getString(R.string.x)
-                CurPlayer = "O"
+            if (validate()) {
+                if (CurPlayer == "X") {
+                    BR.setTextColor(ContextCompat.getColor(this, R.color.X))
+                    BR.text = getString(R.string.x)
+                    CurPlayer = "O"
+                } else if (CurPlayer == "O") {
+                    BR.setTextColor(ContextCompat.getColor(this, R.color.O))
+                    BR.text = getString(R.string.o)
+                    CurPlayer = "X"
+                }
+                BR.isClickable = false
             }
-            else if (CurPlayer=="O"){
-                BR.setTextColor(ContextCompat.getColor(this,R.color.O))
-                BR.text = getString(R.string.o)
-                CurPlayer = "X"
+        }
+    }
+    private fun validate():Boolean{
+        return when {
+            (Player1 == "NA" || Player2 == "NA") -> {
+                Toast.makeText(this, "Player 1 Choose your mark first", Toast.LENGTH_SHORT).show()
+                false
             }
-            BR.isClickable = false
+            else -> {
+                true
+            }
         }
     }
     private fun setPlayerMarks(value: Int){
