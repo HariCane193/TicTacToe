@@ -1,6 +1,7 @@
 package com.example.tictactoe
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,12 +12,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 
-@Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
     private lateinit var Player1:String
     private lateinit var Player2:String
     private lateinit var CurPlayer:String
-    private lateinit var turn:TextView
     private lateinit var TL:Button
     private lateinit var TM:Button
     private lateinit var TR:Button
@@ -26,8 +25,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var BL:Button
     private lateinit var BM:Button
     private lateinit var BR:Button
+    private lateinit var textChooseAndTurn:TextView
+    private lateinit var newGameBtn:Button
     private var playCount = 0
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         //button declaration
         val ChooseX = findViewById<Button>(R.id.btnChooseX)
         val ChooseO = findViewById<Button>(R.id.btnChooseO)
-        val textChoose = findViewById<TextView>(R.id.tvChoose)
+        textChooseAndTurn = findViewById<TextView>(R.id.tvChooseAndTurn)
 
         TL = findViewById<Button>(R.id.btnTL)
         TL.text = "?"
@@ -60,20 +61,24 @@ class MainActivity : AppCompatActivity() {
         BM.text = "?"
         BR = findViewById<Button>(R.id.btnBR)
         BR.text = "?"
+        newGameBtn = findViewById(R.id.btnNewGame)
 
-
+        newGameBtn.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
         ChooseX.setOnClickListener{
             setPlayerMarks(0)
             ChooseX.visibility = INVISIBLE
             ChooseO.visibility = INVISIBLE
-            textChoose.visibility = INVISIBLE
+            updateTurn()
             startGame()
         }
         ChooseO.setOnClickListener{
             setPlayerMarks(1)
             ChooseX.visibility = INVISIBLE
             ChooseO.visibility = INVISIBLE
-            textChoose.visibility = INVISIBLE
+            updateTurn()
             startGame()
         }
 
@@ -233,11 +238,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun updateTurn(){
         if (playCount%2==0){
-            turn.text = getString(R.string.TurnPlayer1)
+            textChooseAndTurn.text = getString(R.string.TurnPlayer1)
         }
         else{
-            turn.text = getString(R.string.TurnPlayer2)
-
+            textChooseAndTurn.text = getString(R.string.TurnPlayer2)
         }
     }
     private fun validate():Boolean{
@@ -284,10 +288,11 @@ class MainActivity : AppCompatActivity() {
         BL.isClickable = false
         BM.isClickable = false
         BR.isClickable = false
-        //turn.visibility = INVISIBLE
+        textChooseAndTurn.visibility = INVISIBLE
     }
     private fun startGame(){
         Toast.makeText(this,"Game Start",Toast.LENGTH_SHORT).show()
+        newGameBtn.visibility = VISIBLE
         TL.visibility = VISIBLE
         TM.visibility = VISIBLE
         TR.visibility = VISIBLE
@@ -297,7 +302,6 @@ class MainActivity : AppCompatActivity() {
         BL.visibility = VISIBLE
         BM.visibility = VISIBLE
         BR.visibility = VISIBLE
-        //turn.visibility = VISIBLE
     }
     private fun checkEnd(location:Int){
         // locations range: 1-9
@@ -398,6 +402,6 @@ class MainActivity : AppCompatActivity() {
         if (!playerWin && playCount==9){
             endGame(0)
         }
-        //updateTurn()
+        updateTurn()
     }
 }

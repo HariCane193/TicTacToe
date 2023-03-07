@@ -198,10 +198,10 @@
         app:layout_constraintVertical_bias="0.908" />
 
     <TextView
-        android:id="@+id/tvChoose"
+        android:id="@+id/tvChooseAndTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player 1 Choose Mark"
+        android:text="@string/player_1_choose_mark"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -212,19 +212,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
 
-    <TextView
-        android:id="@+id/tvTurn"
+    <Button
+        android:id="@+id/btnNewGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Turn: Player 1"
-        android:textColor="@color/white"
-        android:textSize="40sp"
+        android:text="@string/new_game"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.882" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

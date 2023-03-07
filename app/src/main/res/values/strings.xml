@@ -6,4 +6,6 @@
     <string name="turn_player">Turn: Player</string>
     <string name="TurnPlayer1">Turn: Player 1</string>
     <string name="TurnPlayer2">Turn: Player 2</string>
+    <string name="player_1_choose_mark">Player 1 Choose Mark</string>
+    <string name="new_game">New Game</string>
 </resources>
